@@ -1,12 +1,12 @@
 import { DataSource } from "typeorm"
-import { ImapUser } from "./models/ImapUser";
+import { ImapAccount } from "./models/ImapAccount";
 
 export const AppDataSource = new DataSource({
   "type": "sqlite",
   "database": "database.sqlite",
   "synchronize": true,
   "logging": false,
-  "entities": [ImapUser],
+  "entities": [ImapAccount],
   "migrations": [
     "migrations/*.ts"
   ],
