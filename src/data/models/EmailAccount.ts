@@ -9,6 +9,6 @@ export class EmailAccount extends BaseEntity {
     @Column()
     tag: string
 
-    @Column()
+    @Column({unique:true})
     email: string
 }

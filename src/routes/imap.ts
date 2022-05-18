@@ -1,9 +1,9 @@
 const router = require('express').Router();
 import { ImapAccountController}  from '../controllers/imap/account.controller';
-//import { ImapMailController } from '../controllers/imap/mail.controller';
+import { ImapMailController } from '../controllers/imap/mail.controller';
 
 const imapAccountController = new ImapAccountController();
-//const imapMailController = new ImapMailController();
+const imapMailController = new ImapMailController();
 
 // Get all current users
 router.get('/users', imapAccountController.getAll);
@@ -20,6 +20,8 @@ router.post('/user/seed', imapAccountController.seedShit);
 
 // -
 // Retrieve emails for imap
+router.get('/mail', imapMailController.currentTesterShit);
+
 
 // Retrieve all email(s) by imap id
 // router.get('/mail', imapMailController.getAll);

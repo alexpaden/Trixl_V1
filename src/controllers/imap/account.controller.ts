@@ -26,7 +26,7 @@ export class ImapAccountController {
   }
 
   //Get Imap User(s) by tagname
-  async getByTag (req: Request, res: Response) {
+  async getByTag(req: Request, res: Response) {
     try {
       const imapUser = await ImapAccount.getByTag(req.params.tag);
       return res.json(imapUser);
@@ -35,7 +35,7 @@ export class ImapAccountController {
   };
 
   //Get Imap User by email address
-  async getByEmail (req: Request, res: Response) {
+  async getByEmail(req: Request, res: Response) {
     try {
       const imapUser = await ImapAccount.getByEmail(req.body.email);
       return res.json(imapUser);
@@ -46,9 +46,9 @@ export class ImapAccountController {
   //Posts some random data to db as imap users
   async seedShit(_req:Request, res: Response) {
     try {
-      const imap1 = new ImapAccount().newX("aleasdx dd", "email@d.com", "pass", "host", "port");
+      const imap1 = new ImapAccount().newX("aleasdx dd", "email@d.com", "pass", "host", 88);
       await imap1.save();
-      const imap2 = new ImapAccount().newX("alasdasdsex dd", "emasil@d.com", "padddss", "host", "port");
+      const imap2 = new ImapAccount().newX("alasdasdsex dd", "emasil@d.com", "padddss", "host", 88);
       let result = await imap2.save();
       return res.json(result);
     }

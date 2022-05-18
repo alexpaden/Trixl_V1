@@ -7,6 +7,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "imapflow": "^1.0.9",
+    "mailparser": "^3.5.0",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
     "sqlite3": "^5.0.6",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
+    "@types/imapflow": "^1.0.9",
     "@types/node": "^14.14.41",
     "ts-node-dev": "^1.1.8"
   },

@@ -11,7 +11,7 @@ export class ImapAccount extends EmailAccount {
     host: string
 
     @Column()
-    port: string
+    port: number
 
     @Column()
     etc: string
@@ -28,7 +28,7 @@ export class ImapAccount extends EmailAccount {
             .getOne();
     }
 
-    public newX (tag: string, email: string, password: string, host: string, port: string){
+    public newX (tag: string, email: string, password: string, host: string, port: number){
         const imapUser = new ImapAccount();
         imapUser.tag = tag;
         imapUser.email = email;
