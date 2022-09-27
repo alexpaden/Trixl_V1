@@ -1,2 +1,2 @@
 # Trixl_V1
- Local Electronic Mail User-Agent: Typescript, Node, Sqlite
+ Local Electronic Mail user Agent: Typescript, Node, Sqlite
